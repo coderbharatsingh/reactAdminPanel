@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'AvertaStd';
+    font-style: normal;
+    src: url('fonts/avertastd-regular.woff')
+        format('woff'),
+      url('fonts/avertastd-regular.otf')
+        format('opentype');
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'AvertaStd';
+    font-weight: bold;
+    src: url('fonts/avertastd-bold.woff')
+        format('woff'),
+      url('fonts/avertastd-bold.otf')
+        format('opentype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AvertaStd';
+    font-weight: 600;
+    src: url('fonts/avertastd-semibold.woff')
+        format('woff'),
+      url('fonts/avertastd-semibold.otf')
+        format('opentype');
+    font-display: swap;
+}

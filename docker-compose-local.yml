@@ -1,0 +1,32 @@
+version: '3'
+services:
+  react-admin:
+    container_name: edulete.admin
+    restart: always
+    build:
+      context: ./admin
+      dockerfile: Dockerfile.local
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=localhost
+      - PORT=2000
+      - DANGEROUSLY_DISABLE_HOST_CHECK=true
+    ports: 
+      - "2000:2000"
+    volumes:
+      - ./:/app
+    networks:
+      - edulete-network
+
+#Docker Networks
+networks:
+  edulete-network:
+    driver: bridge
+
+#Docker Volumes
+volumes:
+  dbdata:
+    driver: local
+  redis-data:
+    driver: local

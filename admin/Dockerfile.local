@@ -1,0 +1,7 @@
+FROM node:14
+
+WORKDIR '/app/admin'
+
+COPY . .
+
+CMD [ -d "node_modules" ] && npm start

@@ -1,0 +1,10 @@
+cp .env admin
+
+cd ../ && npm install && sudo npm run-script build
+cd ../admin && npm install && sudo npm run-script build
+
+cd ../admin
+if [ -d "$DIR" ]; then
+ rm -rf $DIR
+fi
+mv release release_old && mv build release
